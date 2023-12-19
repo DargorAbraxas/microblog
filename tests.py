@@ -1,18 +1,22 @@
 
 import os
-os.environ["DATABASE_URL"] = "sqlite://"
 import unittest
-from app import app, db
+from app import create_app, db
 from app.models import User, Post
 from datetime import datetime, timezone, timedelta
-
+from config import Config
 
 # import logging
 # import sys
 
+class TestConfig(Config):
+    TESTING = True
+    SQLALCHEMY_DATABASE_URI = "sqlite://"
+
 class UserModelCase(unittest.TestCase):
     def setUp(self) -> None:
-        self.app_context = app.app_context()
+        self.app = create_app(TestConfig)
+        self.app_context = self.app.app_context()
         self.app_context.push()
         db.create_all()
 
