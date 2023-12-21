@@ -1,4 +1,4 @@
-2023-12-19 13:42:09,445 ERROR: Exception on / [GET] [in /home/dargor/.local/share/virtualenvs/microblog-UE3ND_hc/lib/python3.10/site-packages/flask/app.py:825]
+2023-12-19 13:42:36,544 ERROR: Exception on / [GET] [in /home/dargor/.local/share/virtualenvs/microblog-UE3ND_hc/lib/python3.10/site-packages/flask/app.py:825]
 Traceback (most recent call last):
   File "/home/dargor/.local/share/virtualenvs/microblog-UE3ND_hc/lib/python3.10/site-packages/flask/app.py", line 1455, in wsgi_app
     response = self.full_dispatch_request()
@@ -25,34 +25,7 @@ Traceback (most recent call last):
   File "/home/dargor/.local/share/virtualenvs/microblog-UE3ND_hc/lib/python3.10/site-packages/werkzeug/routing/map.py", line 919, in build
     raise BuildError(endpoint, values, method, self)
 werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'login'. Did you mean 'auth.login' instead?
-2023-12-19 13:42:10,419 ERROR: Exception on / [GET] [in /home/dargor/.local/share/virtualenvs/microblog-UE3ND_hc/lib/python3.10/site-packages/flask/app.py:825]
-Traceback (most recent call last):
-  File "/home/dargor/.local/share/virtualenvs/microblog-UE3ND_hc/lib/python3.10/site-packages/flask/app.py", line 1455, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/home/dargor/.local/share/virtualenvs/microblog-UE3ND_hc/lib/python3.10/site-packages/flask/app.py", line 869, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/home/dargor/.local/share/virtualenvs/microblog-UE3ND_hc/lib/python3.10/site-packages/flask/app.py", line 867, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/home/dargor/.local/share/virtualenvs/microblog-UE3ND_hc/lib/python3.10/site-packages/flask/app.py", line 852, in dispatch_request
-    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
-  File "/home/dargor/.local/share/virtualenvs/microblog-UE3ND_hc/lib/python3.10/site-packages/flask_login/utils.py", line 285, in decorated_view
-    return current_app.login_manager.unauthorized()
-  File "/home/dargor/.local/share/virtualenvs/microblog-UE3ND_hc/lib/python3.10/site-packages/flask_login/login_manager.py", line 196, in unauthorized
-    redirect_url = make_login_url(login_view, next_url=request.url)
-  File "/home/dargor/.local/share/virtualenvs/microblog-UE3ND_hc/lib/python3.10/site-packages/flask_login/utils.py", line 120, in login_url
-    base = expand_login_view(login_view)
-  File "/home/dargor/.local/share/virtualenvs/microblog-UE3ND_hc/lib/python3.10/site-packages/flask_login/utils.py", line 97, in expand_login_view
-    return url_for(login_view)
-  File "/home/dargor/.local/share/virtualenvs/microblog-UE3ND_hc/lib/python3.10/site-packages/flask/helpers.py", line 222, in url_for
-    return current_app.url_for(
-  File "/home/dargor/.local/share/virtualenvs/microblog-UE3ND_hc/lib/python3.10/site-packages/flask/app.py", line 1071, in url_for
-    return self.handle_url_build_error(error, endpoint, values)
-  File "/home/dargor/.local/share/virtualenvs/microblog-UE3ND_hc/lib/python3.10/site-packages/flask/app.py", line 1060, in url_for
-    rv = url_adapter.build(  # type: ignore[union-attr]
-  File "/home/dargor/.local/share/virtualenvs/microblog-UE3ND_hc/lib/python3.10/site-packages/werkzeug/routing/map.py", line 919, in build
-    raise BuildError(endpoint, values, method, self)
-werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'login'. Did you mean 'auth.login' instead?
-2023-12-19 13:42:10,757 ERROR: Exception on /favicon.ico [GET] [in /home/dargor/.local/share/virtualenvs/microblog-UE3ND_hc/lib/python3.10/site-packages/flask/app.py:825]
+2023-12-19 13:42:36,679 ERROR: Exception on /favicon.ico [GET] [in /home/dargor/.local/share/virtualenvs/microblog-UE3ND_hc/lib/python3.10/site-packages/flask/app.py:825]
 Traceback (most recent call last):
   File "/home/dargor/.local/share/virtualenvs/microblog-UE3ND_hc/lib/python3.10/site-packages/flask/app.py", line 867, in full_dispatch_request
     rv = self.dispatch_request()
@@ -98,4 +71,32 @@ Traceback (most recent call last):
   File "/home/dargor/.local/share/virtualenvs/microblog-UE3ND_hc/lib/python3.10/site-packages/werkzeug/routing/map.py", line 919, in build
     raise BuildError(endpoint, values, method, self)
 werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'login'. Did you mean 'auth.login' instead?
-2023-12-19 13:42:33,670 INFO: Microblog started [in /home/dargor/projects/microblog/app/__init__.py:64]
+2023-12-19 13:47:35,897 INFO: Microblog started [in /home/dargor/projects/microblog/app/__init__.py:64]
+2023-12-19 13:47:40,794 ERROR: Exception on / [GET] [in /home/dargor/.local/share/virtualenvs/microblog-UE3ND_hc/lib/python3.10/site-packages/flask/app.py:825]
+Traceback (most recent call last):
+  File "/home/dargor/.local/share/virtualenvs/microblog-UE3ND_hc/lib/python3.10/site-packages/flask/app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/dargor/.local/share/virtualenvs/microblog-UE3ND_hc/lib/python3.10/site-packages/flask/app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/dargor/.local/share/virtualenvs/microblog-UE3ND_hc/lib/python3.10/site-packages/flask/app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/dargor/.local/share/virtualenvs/microblog-UE3ND_hc/lib/python3.10/site-packages/flask/app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/dargor/.local/share/virtualenvs/microblog-UE3ND_hc/lib/python3.10/site-packages/flask_login/utils.py", line 285, in decorated_view
+    return current_app.login_manager.unauthorized()
+  File "/home/dargor/.local/share/virtualenvs/microblog-UE3ND_hc/lib/python3.10/site-packages/flask_login/login_manager.py", line 196, in unauthorized
+    redirect_url = make_login_url(login_view, next_url=request.url)
+  File "/home/dargor/.local/share/virtualenvs/microblog-UE3ND_hc/lib/python3.10/site-packages/flask_login/utils.py", line 120, in login_url
+    base = expand_login_view(login_view)
+  File "/home/dargor/.local/share/virtualenvs/microblog-UE3ND_hc/lib/python3.10/site-packages/flask_login/utils.py", line 97, in expand_login_view
+    return url_for(login_view)
+  File "/home/dargor/.local/share/virtualenvs/microblog-UE3ND_hc/lib/python3.10/site-packages/flask/helpers.py", line 222, in url_for
+    return current_app.url_for(
+  File "/home/dargor/.local/share/virtualenvs/microblog-UE3ND_hc/lib/python3.10/site-packages/flask/app.py", line 1071, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+  File "/home/dargor/.local/share/virtualenvs/microblog-UE3ND_hc/lib/python3.10/site-packages/flask/app.py", line 1060, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+  File "/home/dargor/.local/share/virtualenvs/microblog-UE3ND_hc/lib/python3.10/site-packages/werkzeug/routing/map.py", line 919, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'login'. Did you mean 'auth.login' instead?
+2023-12-19 13:51:39,647 INFO: Microblog started [in /home/dargor/projects/microblog/app/__init__.py:64]
