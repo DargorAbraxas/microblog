@@ -1,4 +1,34 @@
-2023-12-16 23:24:50,176 ERROR: Exception on /user/john [GET] [in /home/dargor/.local/share/virtualenvs/microblog-UE3ND_hc/lib/python3.10/site-packages/flask/app.py:825]
+2023-12-19 13:51:51,730 ERROR: Exception on /index [GET] [in /home/dargor/.local/share/virtualenvs/microblog-UE3ND_hc/lib/python3.10/site-packages/flask/app.py:825]
+Traceback (most recent call last):
+  File "/home/dargor/.local/share/virtualenvs/microblog-UE3ND_hc/lib/python3.10/site-packages/flask/app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/dargor/.local/share/virtualenvs/microblog-UE3ND_hc/lib/python3.10/site-packages/flask/app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/dargor/.local/share/virtualenvs/microblog-UE3ND_hc/lib/python3.10/site-packages/flask/app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/dargor/.local/share/virtualenvs/microblog-UE3ND_hc/lib/python3.10/site-packages/flask/app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/dargor/.local/share/virtualenvs/microblog-UE3ND_hc/lib/python3.10/site-packages/flask_login/utils.py", line 285, in decorated_view
+    return current_app.login_manager.unauthorized()
+  File "/home/dargor/.local/share/virtualenvs/microblog-UE3ND_hc/lib/python3.10/site-packages/flask_login/login_manager.py", line 196, in unauthorized
+    redirect_url = make_login_url(login_view, next_url=request.url)
+  File "/home/dargor/.local/share/virtualenvs/microblog-UE3ND_hc/lib/python3.10/site-packages/flask_login/utils.py", line 120, in login_url
+    base = expand_login_view(login_view)
+  File "/home/dargor/.local/share/virtualenvs/microblog-UE3ND_hc/lib/python3.10/site-packages/flask_login/utils.py", line 97, in expand_login_view
+    return url_for(login_view)
+  File "/home/dargor/.local/share/virtualenvs/microblog-UE3ND_hc/lib/python3.10/site-packages/flask/helpers.py", line 222, in url_for
+    return current_app.url_for(
+  File "/home/dargor/.local/share/virtualenvs/microblog-UE3ND_hc/lib/python3.10/site-packages/flask/app.py", line 1071, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+  File "/home/dargor/.local/share/virtualenvs/microblog-UE3ND_hc/lib/python3.10/site-packages/flask/app.py", line 1060, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+  File "/home/dargor/.local/share/virtualenvs/microblog-UE3ND_hc/lib/python3.10/site-packages/werkzeug/routing/map.py", line 919, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'login'. Did you mean 'auth.login' instead?
+2023-12-19 13:56:01,396 INFO: Microblog started [in /home/dargor/projects/microblog/app/__init__.py:64]
+2023-12-19 14:28:41,398 INFO: Microblog started [in /home/dargor/projects/microblog/app/__init__.py:64]
+2023-12-19 14:29:03,176 INFO: Microblog started [in /home/dargor/projects/microblog/app/__init__.py:64]
+2023-12-19 14:29:07,631 ERROR: Exception on /index [GET] [in /home/dargor/.local/share/virtualenvs/microblog-UE3ND_hc/lib/python3.10/site-packages/flask/app.py:825]
 Traceback (most recent call last):
   File "/home/dargor/.local/share/virtualenvs/microblog-UE3ND_hc/lib/python3.10/site-packages/flask/app.py", line 1455, in wsgi_app
     response = self.full_dispatch_request()
@@ -10,98 +40,71 @@ Traceback (most recent call last):
     return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
   File "/home/dargor/.local/share/virtualenvs/microblog-UE3ND_hc/lib/python3.10/site-packages/flask_login/utils.py", line 290, in decorated_view
     return current_app.ensure_sync(func)(*args, **kwargs)
-  File "/home/dargor/projects/microblog/app/routes.py", line 80, in user
-    return render_template("user.html", user=user, posts=posts, form=form)
-  File "/home/dargor/.local/share/virtualenvs/microblog-UE3ND_hc/lib/python3.10/site-packages/flask/templating.py", line 151, in render_template
-    template = app.jinja_env.get_or_select_template(template_name_or_list)
-  File "/home/dargor/.local/share/virtualenvs/microblog-UE3ND_hc/lib/python3.10/site-packages/jinja2/environment.py", line 1081, in get_or_select_template
-    return self.get_template(template_name_or_list, parent, globals)
-  File "/home/dargor/.local/share/virtualenvs/microblog-UE3ND_hc/lib/python3.10/site-packages/jinja2/environment.py", line 1010, in get_template
-    return self._load_template(name, globals)
-  File "/home/dargor/.local/share/virtualenvs/microblog-UE3ND_hc/lib/python3.10/site-packages/jinja2/environment.py", line 969, in _load_template
-    template = self.loader.load(self, name, self.make_globals(globals))
-  File "/home/dargor/.local/share/virtualenvs/microblog-UE3ND_hc/lib/python3.10/site-packages/jinja2/loaders.py", line 138, in load
-    code = environment.compile(source, name, filename)
-  File "/home/dargor/.local/share/virtualenvs/microblog-UE3ND_hc/lib/python3.10/site-packages/jinja2/environment.py", line 768, in compile
-    self.handle_exception(source=source_hint)
+  File "/home/dargor/projects/microblog/app/routes.py", line 39, in index
+    return render_template("index.html", title="Home", posts=posts.items, form=form, next_url=next_url, prev_url=prev_url)
+  File "/home/dargor/.local/share/virtualenvs/microblog-UE3ND_hc/lib/python3.10/site-packages/flask/templating.py", line 152, in render_template
+    return _render(app, template, context)
+  File "/home/dargor/.local/share/virtualenvs/microblog-UE3ND_hc/lib/python3.10/site-packages/flask/templating.py", line 133, in _render
+    rv = template.render(context)
+  File "/home/dargor/.local/share/virtualenvs/microblog-UE3ND_hc/lib/python3.10/site-packages/jinja2/environment.py", line 1301, in render
+    self.environment.handle_exception()
   File "/home/dargor/.local/share/virtualenvs/microblog-UE3ND_hc/lib/python3.10/site-packages/jinja2/environment.py", line 936, in handle_exception
     raise rewrite_traceback_stack(source=source)
-  File "/home/dargor/projects/microblog/app/templates/user.html", line 22, in template
-    <form action="{{ url_for('follow'), username=user.username }}", method="post">
-jinja2.exceptions.TemplateSyntaxError: expected token 'end of print statement', got '='
-2023-12-16 23:25:20,495 ERROR: Exception on /user/john [GET] [in /home/dargor/.local/share/virtualenvs/microblog-UE3ND_hc/lib/python3.10/site-packages/flask/app.py:825]
+  File "/home/dargor/projects/microblog/app/templates/index.html", line 2, in top-level template code
+    {% import "bootstrap_wtf.html" as wtf %}
+  File "/home/dargor/projects/microblog/app/templates/base.html", line 43, in top-level template code
+    <a class="nav-link" aria-current="page" href="{{ url_for('logout') }}">Logout</a>
+  File "/home/dargor/.local/share/virtualenvs/microblog-UE3ND_hc/lib/python3.10/site-packages/flask/app.py", line 1071, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+  File "/home/dargor/.local/share/virtualenvs/microblog-UE3ND_hc/lib/python3.10/site-packages/flask/app.py", line 1060, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+  File "/home/dargor/.local/share/virtualenvs/microblog-UE3ND_hc/lib/python3.10/site-packages/werkzeug/routing/map.py", line 919, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'logout'. Did you mean 'auth.logout' instead?
+2023-12-19 14:29:07,728 ERROR: Exception on /favicon.ico [GET] [in /home/dargor/.local/share/virtualenvs/microblog-UE3ND_hc/lib/python3.10/site-packages/flask/app.py:825]
+Traceback (most recent call last):
+  File "/home/dargor/.local/share/virtualenvs/microblog-UE3ND_hc/lib/python3.10/site-packages/flask/app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/dargor/.local/share/virtualenvs/microblog-UE3ND_hc/lib/python3.10/site-packages/flask/app.py", line 841, in dispatch_request
+    self.raise_routing_exception(req)
+  File "/home/dargor/.local/share/virtualenvs/microblog-UE3ND_hc/lib/python3.10/site-packages/flask/app.py", line 450, in raise_routing_exception
+    raise request.routing_exception  # type: ignore
+  File "/home/dargor/.local/share/virtualenvs/microblog-UE3ND_hc/lib/python3.10/site-packages/flask/ctx.py", line 353, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+  File "/home/dargor/.local/share/virtualenvs/microblog-UE3ND_hc/lib/python3.10/site-packages/werkzeug/routing/map.py", line 624, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+During handling of the above exception, another exception occurred:
+
 Traceback (most recent call last):
   File "/home/dargor/.local/share/virtualenvs/microblog-UE3ND_hc/lib/python3.10/site-packages/flask/app.py", line 1455, in wsgi_app
     response = self.full_dispatch_request()
   File "/home/dargor/.local/share/virtualenvs/microblog-UE3ND_hc/lib/python3.10/site-packages/flask/app.py", line 869, in full_dispatch_request
     rv = self.handle_user_exception(e)
-  File "/home/dargor/.local/share/virtualenvs/microblog-UE3ND_hc/lib/python3.10/site-packages/flask/app.py", line 867, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/home/dargor/.local/share/virtualenvs/microblog-UE3ND_hc/lib/python3.10/site-packages/flask/app.py", line 852, in dispatch_request
-    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
-  File "/home/dargor/.local/share/virtualenvs/microblog-UE3ND_hc/lib/python3.10/site-packages/flask_login/utils.py", line 290, in decorated_view
-    return current_app.ensure_sync(func)(*args, **kwargs)
-  File "/home/dargor/projects/microblog/app/routes.py", line 80, in user
-    return render_template("user.html", user=user, posts=posts, form=form)
-  File "/home/dargor/.local/share/virtualenvs/microblog-UE3ND_hc/lib/python3.10/site-packages/flask/templating.py", line 151, in render_template
-    template = app.jinja_env.get_or_select_template(template_name_or_list)
-  File "/home/dargor/.local/share/virtualenvs/microblog-UE3ND_hc/lib/python3.10/site-packages/jinja2/environment.py", line 1081, in get_or_select_template
-    return self.get_template(template_name_or_list, parent, globals)
-  File "/home/dargor/.local/share/virtualenvs/microblog-UE3ND_hc/lib/python3.10/site-packages/jinja2/environment.py", line 1010, in get_template
-    return self._load_template(name, globals)
-  File "/home/dargor/.local/share/virtualenvs/microblog-UE3ND_hc/lib/python3.10/site-packages/jinja2/environment.py", line 969, in _load_template
-    template = self.loader.load(self, name, self.make_globals(globals))
-  File "/home/dargor/.local/share/virtualenvs/microblog-UE3ND_hc/lib/python3.10/site-packages/jinja2/loaders.py", line 138, in load
-    code = environment.compile(source, name, filename)
-  File "/home/dargor/.local/share/virtualenvs/microblog-UE3ND_hc/lib/python3.10/site-packages/jinja2/environment.py", line 768, in compile
-    self.handle_exception(source=source_hint)
+  File "/home/dargor/.local/share/virtualenvs/microblog-UE3ND_hc/lib/python3.10/site-packages/flask/app.py", line 752, in handle_user_exception
+    return self.handle_http_exception(e)
+  File "/home/dargor/.local/share/virtualenvs/microblog-UE3ND_hc/lib/python3.10/site-packages/flask/app.py", line 727, in handle_http_exception
+    return self.ensure_sync(handler)(e)
+  File "/home/dargor/projects/microblog/app/errors/handlers.py", line 7, in not_found_error
+    return render_template("errors/404.html"), 400
+  File "/home/dargor/.local/share/virtualenvs/microblog-UE3ND_hc/lib/python3.10/site-packages/flask/templating.py", line 152, in render_template
+    return _render(app, template, context)
+  File "/home/dargor/.local/share/virtualenvs/microblog-UE3ND_hc/lib/python3.10/site-packages/flask/templating.py", line 133, in _render
+    rv = template.render(context)
+  File "/home/dargor/.local/share/virtualenvs/microblog-UE3ND_hc/lib/python3.10/site-packages/jinja2/environment.py", line 1301, in render
+    self.environment.handle_exception()
   File "/home/dargor/.local/share/virtualenvs/microblog-UE3ND_hc/lib/python3.10/site-packages/jinja2/environment.py", line 936, in handle_exception
     raise rewrite_traceback_stack(source=source)
-  File "/home/dargor/projects/microblog/app/templates/user.html", line 22, in template
-    <form action="{{ url_for('follow'), username=user.username }}", method="post">
-jinja2.exceptions.TemplateSyntaxError: expected token 'end of print statement', got '='
-2023-12-16 23:33:42,536 INFO: Microblog started [in /home/dargor/projects/microblog/app/__init__.py:47]
-2023-12-17 00:59:17,486 INFO: Microblog started [in /home/dargor/projects/microblog/app/__init__.py:47]
-2023-12-17 01:01:38,682 INFO: Microblog started [in /home/dargor/projects/microblog/app/__init__.py:47]
-2023-12-17 01:06:26,795 INFO: Microblog started [in /home/dargor/projects/microblog/app/__init__.py:47]
-2023-12-17 01:17:51,327 INFO: Microblog started [in /home/dargor/projects/microblog/app/__init__.py:47]
-2023-12-17 01:18:14,394 INFO: Microblog started [in /home/dargor/projects/microblog/app/__init__.py:47]
-2023-12-17 01:27:41,632 INFO: Microblog started [in /home/dargor/projects/microblog/app/__init__.py:47]
-2023-12-17 01:37:54,990 INFO: Microblog started [in /home/dargor/projects/microblog/app/__init__.py:47]
-2023-12-17 01:38:27,127 ERROR: Exception on /user/john [GET] [in /home/dargor/.local/share/virtualenvs/microblog-UE3ND_hc/lib/python3.10/site-packages/flask/app.py:825]
-Traceback (most recent call last):
-  File "/home/dargor/.local/share/virtualenvs/microblog-UE3ND_hc/lib/python3.10/site-packages/flask/app.py", line 1455, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/home/dargor/.local/share/virtualenvs/microblog-UE3ND_hc/lib/python3.10/site-packages/flask/app.py", line 869, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/home/dargor/.local/share/virtualenvs/microblog-UE3ND_hc/lib/python3.10/site-packages/flask/app.py", line 867, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/home/dargor/.local/share/virtualenvs/microblog-UE3ND_hc/lib/python3.10/site-packages/flask/app.py", line 852, in dispatch_request
-    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
-  File "/home/dargor/.local/share/virtualenvs/microblog-UE3ND_hc/lib/python3.10/site-packages/flask_login/utils.py", line 290, in decorated_view
-    return current_app.ensure_sync(func)(*args, **kwargs)
-  File "/home/dargor/projects/microblog/app/routes.py", line 83, in user
-    user = db.first_or404(sa.select(User).where(User.username == username))
-  File "/home/dargor/.local/share/virtualenvs/microblog-UE3ND_hc/lib/python3.10/site-packages/flask_sqlalchemy/extension.py", line 1008, in __getattr__
-    raise AttributeError(name)
-AttributeError: first_or404
-2023-12-17 01:38:28,358 ERROR: Exception on /user/john [GET] [in /home/dargor/.local/share/virtualenvs/microblog-UE3ND_hc/lib/python3.10/site-packages/flask/app.py:825]
-Traceback (most recent call last):
-  File "/home/dargor/.local/share/virtualenvs/microblog-UE3ND_hc/lib/python3.10/site-packages/flask/app.py", line 1455, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/home/dargor/.local/share/virtualenvs/microblog-UE3ND_hc/lib/python3.10/site-packages/flask/app.py", line 869, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/home/dargor/.local/share/virtualenvs/microblog-UE3ND_hc/lib/python3.10/site-packages/flask/app.py", line 867, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/home/dargor/.local/share/virtualenvs/microblog-UE3ND_hc/lib/python3.10/site-packages/flask/app.py", line 852, in dispatch_request
-    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
-  File "/home/dargor/.local/share/virtualenvs/microblog-UE3ND_hc/lib/python3.10/site-packages/flask_login/utils.py", line 290, in decorated_view
-    return current_app.ensure_sync(func)(*args, **kwargs)
-  File "/home/dargor/projects/microblog/app/routes.py", line 83, in user
-    user = db.first_or404(sa.select(User).where(User.username == username))
-  File "/home/dargor/.local/share/virtualenvs/microblog-UE3ND_hc/lib/python3.10/site-packages/flask_sqlalchemy/extension.py", line 1008, in __getattr__
-    raise AttributeError(name)
-AttributeError: first_or404
-2023-12-17 01:39:32,149 INFO: Microblog started [in /home/dargor/projects/microblog/app/__init__.py:47]
-2023-12-18 10:31:52,062 INFO: Microblog started [in /home/dargor/projects/microblog/app/__init__.py:50]
-2023-12-18 11:39:32,152 INFO: Microblog started [in /home/dargor/projects/microblog/app/__init__.py:50]
+  File "/home/dargor/projects/microblog/app/templates/errors/404.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "/home/dargor/projects/microblog/app/templates/base.html", line 43, in top-level template code
+    <a class="nav-link" aria-current="page" href="{{ url_for('logout') }}">Logout</a>
+  File "/home/dargor/.local/share/virtualenvs/microblog-UE3ND_hc/lib/python3.10/site-packages/flask/app.py", line 1071, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+  File "/home/dargor/.local/share/virtualenvs/microblog-UE3ND_hc/lib/python3.10/site-packages/flask/app.py", line 1060, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+  File "/home/dargor/.local/share/virtualenvs/microblog-UE3ND_hc/lib/python3.10/site-packages/werkzeug/routing/map.py", line 919, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'logout'. Did you mean 'auth.logout' instead?
+2023-12-19 14:43:10,989 INFO: Microblog started [in /home/dargor/projects/microblog/app/__init__.py:64]
